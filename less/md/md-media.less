@@ -1,0 +1,56 @@
+.media {
+  // Proper spacing between instances of .media
+  margin-top: 16px;
+  padding: 8px 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.media,
+.media-body {
+  color: @color-secondary-text;
+
+  p:last-child {
+    margin: 0;
+  }
+}
+
+.media-body {
+}
+
+.media-object {
+}
+
+.media-right,
+.media > .pull-right {
+}
+
+.media-left,
+.media > .pull-left {
+  padding-right: 16px;
+}
+
+.media-left,
+.media-right,
+.media-body {
+}
+
+.media-middle {
+}
+
+.media-bottom {
+}
+
+// Reset margins on headings for tighter default spacing
+.media-heading {
+  color: @color-text;
+  line-height: 1;
+}
+
+// Media list variation
+//
+// Undo default ul/ol styles
+.media-list {
+}

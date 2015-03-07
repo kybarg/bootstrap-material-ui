@@ -1,0 +1,191 @@
+//
+// Button groups
+// --------------------------------------------------
+
+// Make the div behave like a button
+.btn-group,
+.btn-group-vertical {
+
+  > .btn {
+
+    // Bring the "active" button to the front
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+    }
+  }
+}
+
+// Prevent double borders when buttons are next to each other
+.btn-group {
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+  }
+}
+
+// Optional: Group multiple button groups together for a toolbar
+.btn-toolbar {
+
+  .btn-group,
+  .input-group {
+  }
+  > .btn,
+  > .btn-group,
+  > .input-group {
+  }
+}
+
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+}
+
+// Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
+.btn-group > .btn:first-child {
+  &:not(:last-child):not(.dropdown-toggle) {
+  }
+}
+// Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
+.btn-group > .btn:last-child:not(:first-child),
+.btn-group > .dropdown-toggle:not(:first-child) {
+}
+
+// Custom edits for including btn-groups within btn-groups (useful for including dropdown buttons within a btn-group)
+.btn-group > .btn-group {
+}
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+}
+.btn-group > .btn-group:first-child:not(:last-child) {
+  > .btn:last-child,
+  > .dropdown-toggle {
+  }
+}
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
+}
+
+// On active and open, don't show outline
+.btn-group .dropdown-toggle:active,
+.btn-group.open .dropdown-toggle {
+}
+
+
+// Sizing
+//
+// Remix the default button sizing classes into new ones for easier manipulation.
+
+.btn-group-xs > .btn {  }
+.btn-group-sm > .btn {  }
+.btn-group-lg > .btn {  }
+
+
+// Split button dropdowns
+// ----------------------
+
+// Give the line between buttons some depth
+.btn-group > .btn + .dropdown-toggle {
+
+}
+.btn-group > .btn-lg + .dropdown-toggle {
+
+}
+
+// The clickable button for toggling the menu
+// Remove the gradient and set the same inset shadow as the :active state
+.btn-group.open .dropdown-toggle {
+  .box-shadow(none);
+
+  // Show no shadow for `.btn-link` since it has no other button styles.
+  &.btn-link {
+    .box-shadow(none);
+  }
+}
+
+
+// Reposition the caret
+.btn .caret {
+}
+// Carets in other button sizes
+.btn-lg .caret {
+}
+// Upside down carets for .dropup
+.dropup .btn-lg .caret {
+}
+
+
+// Vertical button groups
+// ----------------------
+
+.btn-group-vertical {
+  > .btn,
+  > .btn-group,
+  > .btn-group > .btn {
+  }
+
+  // Clear floats so dropdown menus can be properly placed
+  > .btn-group {
+    > .btn {
+    }
+  }
+
+  > .btn + .btn,
+  > .btn + .btn-group,
+  > .btn-group + .btn,
+  > .btn-group + .btn-group {
+  }
+}
+
+.btn-group-vertical > .btn {
+  &:not(:first-child):not(:last-child) {
+  }
+  &:first-child:not(:last-child) {
+  }
+  &:last-child:not(:first-child) {
+  }
+}
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
+}
+.btn-group-vertical > .btn-group:first-child:not(:last-child) {
+  > .btn:last-child,
+  > .dropdown-toggle {
+  }
+}
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
+}
+
+
+// Justified button groups
+// ----------------------
+
+.btn-group-justified {
+  > .btn,
+  > .btn-group {
+  }
+  > .btn-group .btn {
+  }
+
+  > .btn-group .dropdown-menu {
+  }
+}
+
+
+// Checkbox and radio options
+//
+// In order to support the browser's form validation feedback, powered by the
+// `required` attribute, we have to "hide" the inputs via `clip`. We cannot use
+// `display: none;` or `visibility: hidden;` as that also hides the popover.
+// Simply visually hiding the inputs via `opacity` would leave them clickable in
+// certain cases which is prevented by using `clip` and `pointer-events`.
+// This way, we ensure a DOM element is visible to position the popover from.
+//
+// See https://github.com/twbs/bootstrap/pull/12794 and
+// https://github.com/twbs/bootstrap/pull/14559 for more information.
+
+[data-toggle="buttons"] {
+  > .btn,
+  > .btn-group > .btn {
+    input[type="radio"],
+    input[type="checkbox"] {
+    }
+  }
+}

@@ -1,0 +1,148 @@
+//
+// Navs
+// --------------------------------------------------
+
+
+// Base class
+// --------------------------------------------------
+
+.nav {
+
+  > li {
+    margin: 0;
+
+    > a {
+      color: @color-secondary-text;
+      font-weight: 500;
+      border-radius: 0 !important;
+      &:hover,
+      &:focus {
+        color: @color-text;
+        background-color: transparent;
+      }
+    }
+  }
+
+  // Open dropdowns
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      color: @color-text;
+    }
+  }
+}
+
+
+// Tabs
+// -------------------------
+
+// Give the tabs something to sit on
+.nav-tabs {
+  > li {
+
+    // Actual tabs (as links)
+    > a {
+      border-color: transparent !important;
+      border-width: 0 !important;
+      border-bottom-width: 2px !important;
+      padding-bottom: 12px;
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      border-color: @color-dividers;
+      color: @color-text !important;
+      
+      &,
+      &:hover,
+      &:focus {
+        border-color: @color-dividers !important;
+        background: transparent;
+      }
+    }
+  }
+}
+
+
+// Pills
+// -------------------------
+.nav-pills {
+  > li {
+
+    // Links rendered as pills
+    > a {
+    }
+    + li {
+      margin-left: 0;
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+
+      }
+    }
+  }
+}
+
+
+// Stacked pills
+.nav-stacked {
+  > li {
+    + li {
+      margin-top: 0;
+    }
+  }
+}
+
+
+// Nav variations
+// --------------------------------------------------
+
+// Justified nav links
+// -------------------------
+
+.nav-justified {
+
+  > li {
+    > a {
+      border-color: transparent;
+    }
+  }
+
+  @media (min-width: @screen-sm-min) {
+    > li {
+      > a {
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+// Move borders to anchors instead of bottom of list
+//
+// Mixin for adding on top the shared `.nav-justified` styles for our tabs
+.nav-tabs-justified {
+
+  > li > a {
+    border-color: transparent;
+  }
+
+  @media (min-width: @screen-sm-min) {
+    > li > a {
+      border-color: transparent;
+    }
+  }
+}
+
+
+// Dropdowns
+// -------------------------
+
+// Specific dropdowns
+.nav-tabs .dropdown-menu {
+  border-radius: 3px;
+}

@@ -1,0 +1,76 @@
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+.pagination {
+  border: 0;
+
+  > li {
+    > a,
+    > span {
+      min-width: 38px;
+      text-align: center;
+      border: 0;
+    }
+    &:first-child {
+      > a,
+      > span {
+      }
+    }
+    &:last-child {
+      > a,
+      > span {
+      }
+    }
+  }
+
+  > li > a,
+  > li > span {
+    &:hover,
+    &:focus {
+
+    }
+  }
+
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+
+    }
+  }
+
+  > .disabled {
+    > span,
+    > span:hover,
+    > span:focus,
+    > a,
+    > a:hover,
+    > a:focus {
+
+    }
+  }
+}
+
+// Sizing
+// --------------------------------------------------
+
+// Large
+.pagination-lg {
+  > li {
+    > a,
+    > span {
+     min-width: 44px;
+    }
+  }
+}
+
+// Small
+.pagination-sm {
+  > li {
+    > a,
+    > span {
+      min-width: 29px;
+    }
+  }
+}

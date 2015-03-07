@@ -1,0 +1,63 @@
+//
+// Popovers
+// --------------------------------------------------
+
+
+.popover {
+
+  // Offset the popover to account for the popover arrow
+  &.top     { }
+  &.right   { }
+  &.bottom  { }
+  &.left    { }
+}
+
+.popover-title {
+  border: none;
+  font-size: 18px;
+  padding: 16px 16px 0;
+}
+
+.popover-content {
+  padding: 16px;
+}
+
+// Arrows
+//
+// .arrow is outer, .arrow:after is inner
+
+.popover > .arrow {
+  &,
+  &:after {
+
+  }
+}
+.popover > .arrow {
+}
+.popover > .arrow:after {
+
+}
+
+.popover {
+  &.top > .arrow {
+
+    &:after {
+
+    }
+  }
+  &.right > .arrow {
+    &:after {
+    }
+  }
+  &.bottom > .arrow {
+    &:after {
+
+    }
+  }
+
+  &.left > .arrow {
+    &:after {
+
+    }
+  }
+}

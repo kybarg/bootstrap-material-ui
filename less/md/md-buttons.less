@@ -1,0 +1,113 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  border: 0;
+  font-weight: 500;
+  min-width: 36px;
+  text-transform: uppercase;
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      background-image: none;
+      .box-shadow(none);
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    .box-shadow(none);
+  }
+
+  &:active,
+  &.active {
+    .box-shadow(none);
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    color: @btn-link-disabled-color;
+    text-decoration: none;
+    .opacity(1);
+  }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default { .btn-styles(); }
+.btn-primary { .btn-styles(@brand-primary-700); }
+.btn-success { .btn-styles(@brand-success-700); }
+.btn-info    { .btn-styles(@brand-info-700); }
+.btn-warning { .btn-styles(@brand-warning-700); }
+.btn-danger  { .btn-styles(@brand-danger-700); }
+
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] & {
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+  }
+  &:hover,
+  &:focus {
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+    }
+  }
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg {
+}
+.btn-sm {
+}
+.btn-xs {
+}
+
+
+// Block button
+// --------------------------------------------------
+
+.btn-block {
+
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+  }
+}

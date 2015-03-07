@@ -1,0 +1,26 @@
+//
+// Thumbnails
+// --------------------------------------------------
+
+
+// Mixin and adjust the regular image class
+.thumbnail {
+  .md-shadow-1();
+  border: none;
+
+  > img,
+  a > img {
+    border-radius: 3px;
+    display: block;
+  }
+
+  // Add a hover state for linked versions only
+  a&:hover,
+  a&:focus,
+  a&.active {
+  }
+
+  // Image captions
+  .caption {
+  }
+}

@@ -1,0 +1,56 @@
+//
+// Progress bars
+// --------------------------------------------------
+
+
+
+// Bar itself
+// -------------------------
+
+// Outer container
+.progress {
+  height: 8px;
+  .box-shadow(none);
+}
+
+// Bar of progress
+.progress-bar {
+  font-size: 8px;
+  line-height: 8px;
+  .box-shadow(none);
+}
+
+// Striped bars
+//
+// `.progress-striped .progress-bar` is deprecated as of v3.2.0 in favor of the
+// `.progress-bar-striped` class, which you just add to an existing
+// `.progress-bar`.
+.progress-striped .progress-bar,
+.progress-bar-striped {
+  #gradient > .striped();
+  background-size: 16px 16px;
+}
+
+// Call animation for the active one
+//
+// `.progress.active .progress-bar` is deprecated as of v3.2.0 in favor of the
+// `.progress-bar.active` approach.
+.progress.active .progress-bar,
+.progress-bar.active {
+}
+
+
+// Variations
+// -------------------------
+
+.progress-bar-success {
+}
+
+.progress-bar-info {
+}
+
+.progress-bar-warning {
+}
+
+.progress-bar-danger {
+}

@@ -1,0 +1,23 @@
+//
+// Close icons
+// --------------------------------------------------
+
+
+.close {
+  color: @color-secondary-text;
+  font-weight: normal;
+  line-height: 24px;
+  .opacity(1);
+  
+  &:hover,
+  &:focus {
+
+  }
+
+  // Additional properties for button version
+  // iOS requires the button element instead of an anchor tag.
+  // If you want the anchor version, it requires `href="#"`.
+  button& {
+    line-height: 24px;
+  }
+}

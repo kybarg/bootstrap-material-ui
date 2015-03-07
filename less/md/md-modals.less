@@ -1,0 +1,122 @@
+//
+// Modals
+// --------------------------------------------------
+
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and shit
+
+// Kill the scroll on the body
+.modal-open {
+}
+
+// Container that the modal scrolls within
+.modal {
+
+  // When fading in the modal, animate it to slide down
+  &.fade .modal-dialog {
+  }
+  &.in .modal-dialog {
+  }
+}
+.modal-open .modal {
+
+}
+
+// Shell div to position the modal with bottom padding
+.modal-dialog {
+}
+
+// Actual modal
+.modal-content {
+  .md-shadow-3();
+}
+
+// Modal background
+.modal-backdrop {
+
+  // Fade for backdrop
+  &.fade {
+    
+  }
+  &.in {
+    
+  }
+}
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.modal-header {
+  
+  + .modal-body,
+  + .modal-footer {
+    padding-top: 0;
+  }
+}
+// Close icon
+.modal-header .close {
+}
+// Title text within header
+.modal-title {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-body {
+  color: @color-secondary-text;
+  font-size: 16px;
+  line-height: 24px;
+  
+  + .modal-footer {
+    padding-top: 0;
+  }
+}
+
+// Footer (for actions)
+.modal-footer {
+  padding: 8px 16px;
+  
+  .btn {
+    margin-bottom: 6px !important;
+    margin-top: 6px !important;
+  }
+  // Properly space out buttons
+  .btn + .btn {
+    margin-left: 8px;
+  }
+  // but override that for button groups
+  .btn-group .btn + .btn {
+  }
+  // and override it for block buttons as well
+  .btn-block + .btn-block {
+  }
+}
+
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+
+}
+
+// Scale up the modal
+@media (min-width: @screen-sm-min) {
+  // Automatically set modal's width for larger viewports
+  .modal-dialog {
+
+  }
+  .modal-content {
+  }
+
+  // Modal sizes
+  .modal-sm {
+    
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  .modal-lg {
+    
+  }
+}
